@@ -6,6 +6,7 @@ import com.cnu.blackjack.exceptions.PlayerDoesNotExistException;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class Game {
 
@@ -15,6 +16,16 @@ public class Game {
 
     public Game(Deck deck) {
         this.deck = deck;
+    }
+
+    public int ongame_people_num(){
+        AtomicInteger peole_num = new AtomicInteger();
+        playerList.forEach((name, player) -> {
+            if(!player.getState()){
+                peole_num.getAndIncrement();
+            }
+        });
+            return peole_num.get();
     }
 
     public void addPlayer(String playerName, int seedMoney) {

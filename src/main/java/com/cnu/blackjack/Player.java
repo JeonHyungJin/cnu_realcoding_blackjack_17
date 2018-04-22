@@ -9,6 +9,7 @@ public class Player {
     private int balance;
     private int currentBet;
     private Hand hand;
+    private boolean state = true;  //false가 stay
 
     public Player(int seedMoney, Hand hand) {
         this.balance = seedMoney;
@@ -23,6 +24,9 @@ public class Player {
         currentBet = bet;
     }
 
+    public boolean getState(){
+        return state;
+    }
     public Card hitCard() {
         return hand.drawCard();
     }
