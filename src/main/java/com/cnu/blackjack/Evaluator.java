@@ -97,22 +97,6 @@ public class Evaluator {
                 }
             }
 
-/*
-            if (dealer.getDealerScore() > 21 && player.getHand().gettotalscore() <= 21) {   //딜러가 파산, 플레이어가 21이하로 승리 경우
-                player.setBalance(player.getCurrentBet() * 2 + player.getBalance());
-                System.out.println(name + "승리");
-                System.out.println(player.getHand().gettotalscore());
-            } else if (dealer.getDealerScore() < 21 && player.getHand().gettotalscore() <= 21) {   //둘다 21이하
-                if (player.getHand().gettotalscore() > dealer.getDealerScore()) {   //플레이어 승리
-                    player.setBalance(player.getCurrentBet() * 2 + player.getBalance());
-                    System.out.println(name + "승리");
-                    System.out.println(player.getHand().gettotalscore());
-                } else {  //플레이어 패배
-                    System.out.println(name + "패배");
-                    System.out.println(player.getHand().gettotalscore());
-                }
-            }*/
-
         });
 
     }
